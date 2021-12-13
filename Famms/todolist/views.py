@@ -41,3 +41,7 @@ def product(request):
 
 def blog(request):
     return render(request, "blog_list.html", {})
+
+
+def contact(request):
+    return render(request, "contact.html", {})

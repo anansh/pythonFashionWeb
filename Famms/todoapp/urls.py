@@ -19,11 +19,13 @@ from todolist.views import todoApp
 from todolist.views import index
 from todolist.views import product
 from todolist.views import blog
+from todolist.views import contact
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('todolist/', todoApp, name="TodoList"),
     path('', index),
     path('product/', product),
-    path('blog/', blog)
+    path('blog/', blog),
+    path('contact/', contact)
 ]
