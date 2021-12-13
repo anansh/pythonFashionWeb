@@ -18,10 +18,12 @@ from django.urls import path
 from todolist.views import todoApp
 from todolist.views import index
 from todolist.views import product
+from todolist.views import blog
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('todolist/', todoApp, name="TodoList"),
     path('', index),
-    path('product/', product)
+    path('product/', product),
+    path('blog/', blog)
 ]

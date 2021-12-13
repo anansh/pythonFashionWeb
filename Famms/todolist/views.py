@@ -37,3 +37,7 @@ def index(request):
 
 def product(request):
     return render(request, "product.html", {})
+
+
+def blog(request):
+    return render(request, "blog_list.html", {})
