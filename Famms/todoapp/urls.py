@@ -20,6 +20,7 @@ from todolist.views import index
 from todolist.views import product
 from todolist.views import blog
 from todolist.views import contact
+from todolist.views import about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +28,6 @@ urlpatterns = [
     path('', index),
     path('product/', product),
     path('blog/', blog),
-    path('contact/', contact)
+    path('contact/', contact),
+    path('about/', about),
 ]
