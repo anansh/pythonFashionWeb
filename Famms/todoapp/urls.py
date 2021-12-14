@@ -14,20 +14,27 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from todolist.views import todoApp
 from todolist.views import index
 from todolist.views import product
 from todolist.views import blog
 from todolist.views import contact
 from todolist.views import about
+from todolist.views import testimonial
+from todolist.views import login
+from todolist.views import register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('todolist/', todoApp, name="TodoList"),
     path('', index),
     path('product/', product),
     path('blog/', blog),
     path('contact/', contact),
     path('about/', about),
+    path('testimonial/', testimonial),
+    path('signIn/', login),
+    path('register/', register)
 ]
